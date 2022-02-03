@@ -1,50 +1,177 @@
 import React from "react";
-import { Card, CardContent, Typography } from "@mui/material/";
+import { Card, Box, Grid, CardContent, Typography } from "@mui/material/";
+
+import circleBlue from "../img/circle_blue.svg";
 
 const WhatWillYouDo = () => {
   return (
     <Card
       sx={{
-        minWidth: "85%",
-        padding: "1rem",
-        marginBottom: "5%",
-        marginTop: "5%",
+        width: { xs: 342, md: 800, lg: 1200 },
+        height: "auto",
+        backgroundColor: "#FFFFFF",
+        marginTop: { xs: 5, md: 7, lg: 10 },
       }}
       m={3}
       elevation={3}
     >
-      <CardContent>
-        <Typography
-          sx={{ fontSize: 30, textAlign: "center" }}
-          color="textPrimary"
-          variant="h2"
-          gutterBottom
+      <CardContent
+        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      >
+        <Box
+          sx={{
+            fontSize: 20,
+            position: "relative",
+            display: "inline-block",
+            "&::before": {
+              content: `""`,
+              position: "absolute",
+              bottom: { xs: 9, md: 11, lg: 14 },
+              width: "calc(100% + 10px)",
+              height: { xs: 5, md: 6, lg: 7 },
+              left: "5px",
+              opacity: "0.3",
+              backgroundColor: "#3CDFF5",
+            },
+          }}
         >
-          What will you do?
-        </Typography>
+          <Typography
+            sx={{
+              marginTop: { xs: 3, md: 5, lg: 7 },
+              fontSize: { xs: 18, md: 24, lg: 30 },
+              fontWeight: 600,
+              textAlign: "center",
+              color: "#000000",
+            }}
+            color="textPrimary"
+            variant="h2"
+            gutterBottom
+          >
+            What will you do?
+          </Typography>
+        </Box>
       </CardContent>
-      <div
-        style={{
-          display: "flex",
+      <CardContent
+        sx={{
+          display: "grid",
+          gridTemplateColumns: {
+            xs: "repeat(1,1fr)",
+            md: "repeat(2,1fr)",
+          },
+          gridGap: { md: 7, lg: 10 },
+          margin: { xs: 1, md: 3, lg: 5 },
           justifyContent: "center",
-          alignContent: "baseline",
           alignItems: "center",
-          width: "50%",
+          textAlign: "left",
+          height: "auto",
+          padding: 0,
         }}
       >
-        <div
-          style={{
-            width: 5,
-            height: 5,
-            backgroundColor: "#3cdff5",
-            borderRadius: "50%",
-            textAlign: "start",
-          }}
-        />
-        <Typography style={{ marginBottom: 0, marginLeft: "3px" }} gutterBottom>
-          Develop and maintain all server-side network components.
-        </Typography>
-      </div>
+        <Grid container wrap="nowrap" spacing={2} margin={0}>
+          <Grid item>
+            <img
+              src={circleBlue}
+              alt="circle_Blue"
+              className="circle_Blue"
+            ></img>
+          </Grid>
+          <Grid item xs>
+            <Typography
+              sx={{
+                margin: 0,
+                color: "#3E3E3E",
+                fontsize: { xs: 16, lg: 18 },
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "left",
+                width: { md: 300, lg: 463 },
+              }}
+              gutterBottom
+            >
+              Develop and maintain all server-side network components. Develop
+              and maintain all server-side network components.
+            </Typography>{" "}
+          </Grid>
+        </Grid>
+        <Grid container wrap="nowrap" spacing={2} margin={0}>
+          <Grid item>
+            <img
+              src={circleBlue}
+              alt="circle_Blue"
+              className="circle_Blue"
+            ></img>
+          </Grid>
+          <Grid item xs>
+            <Typography
+              sx={{
+                margin: 0,
+                color: "#3E3E3E",
+                fontsize: { xs: 16, lg: 18 },
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "left",
+                width: { md: 300, lg: 463 },
+              }}
+              gutterBottom
+            >
+              Develop and maintain all server-side network components. Develop
+              and maintain all server-side network components.
+            </Typography>{" "}
+          </Grid>
+        </Grid>
+        <Grid container wrap="nowrap" spacing={2} margin={0}>
+          <Grid item>
+            <img
+              src={circleBlue}
+              alt="circle_Blue"
+              className="circle_Blue"
+            ></img>
+          </Grid>
+          <Grid item xs>
+            <Typography
+              sx={{
+                margin: 0,
+                color: "#3E3E3E",
+                fontsize: { xs: 16, lg: 18 },
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "left",
+                width: { md: 300, lg: 463 },
+              }}
+              gutterBottom
+            >
+              Develop and maintain all server-side network components. Develop
+              and maintain all server-side network components.
+            </Typography>{" "}
+          </Grid>
+        </Grid>
+        <Grid container wrap="nowrap" spacing={2} margin={0}>
+          <Grid item>
+            <img
+              src={circleBlue}
+              alt="circle_Blue"
+              className="circle_Blue"
+            ></img>
+          </Grid>
+          <Grid item xs>
+            <Typography
+              sx={{
+                margin: 0,
+                color: "#3E3E3E",
+                fontsize: { xs: 16, lg: 18 },
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "left",
+                width: { md: 300, lg: 463 },
+              }}
+              gutterBottom
+            >
+              Develop and maintain all server-side network components.Develop
+              and maintain all server-side network components.
+            </Typography>{" "}
+          </Grid>
+        </Grid>
+      </CardContent>
     </Card>
   );
 };
