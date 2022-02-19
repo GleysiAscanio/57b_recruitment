@@ -7,7 +7,8 @@ import axios from "axios";
 import HeaderView from "../ComponentsCandidate/HeaderViews.jsx";
 import WhatWillYouDo from "../ComponentsCandidate/ComponentsSecondView/WhatWillYouDo.jsx";
 import OpportunityConditions from "../ComponentsCandidate/ComponentsSecondView/OpportunityConditions.jsx";
-import OfferButtons from "../ComponentsCandidate/UserButtons.jsx";
+import UserButtons from "../ComponentsCandidate/UserButtons.jsx";
+import ShareOffer from "../ComponentsCandidate/ShareOffer.jsx";
 import "../ComponentsCandidate/componentsCandidate.css";
 import arrowReturn from "../ComponentsCandidate/img/arrow_return.svg";
 
@@ -20,6 +21,8 @@ const perkItems = [
   "Personalized salary.",
   "100% Health insurance.",
   "Be treated like a Talent, not a number.",
+  "Excellent teamwork and work environment.",
+  "Personalized career path.",
 ];
 const SecondViewCandidate = () => {
   const { id } = useParams();
@@ -82,14 +85,41 @@ const SecondViewCandidate = () => {
         <WhatWillYouDo />
       </Box>
 
-      <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <Box
+        sx={{
+          display: "grid",
+          gridTemplateColumns: {
+            xs: "repeat(1,1fr)",
+            md: "repeat(2,1fr)",
+          },
+          gridGap: { md: 5, lg: 10 },
+          width: { xs: 342, md: 800, lg: 1200 },
+          height: "auto",
+          marginLeft: { xs: 2, md: 16, lg: 47 },
+          justifyContent: "space-between",
+          alignItems: "center",
+          backgroundColor: "#FFFFFF",
+        }}
+      >
         <OpportunityConditions kind="experience" items={experienceItems} />
         <OpportunityConditions kind="perk" items={perkItems} />
       </Box>
 
       <Box sx={{ display: "flex", justifyContent: "center", marginX: 5 }}>
-        <OfferButtons textContent="Apply" component={Link} to={"/apply"} />
-        <OfferButtons textContent="Refer" component={Link} to={"/apply"} />
+        <UserButtons textContent="Apply" component={Link} to={"/apply"} />
+        <UserButtons textContent="Refer" component={Link} to={"/apply"} />
+      </Box>
+      <Box
+        sx={{
+          width: {
+            xs: 342,
+            md: 800,
+            lg: 1200,
+          },
+          marginLeft: { xs: 2, md: 16, lg: 47 },
+        }}
+      >
+        <ShareOffer linkJob={`opportunity-detail/${job.id}`} />
       </Box>
     </>
   );

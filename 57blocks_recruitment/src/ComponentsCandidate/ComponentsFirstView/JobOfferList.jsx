@@ -121,8 +121,7 @@ const JobOfferList = () => {
               component={Link}
               to={`opportunity-detail/${job.id}`}
             >
-              {" "}
-              View more{" "}
+              View more
             </Typography>
             <Box
               sx={{
@@ -132,8 +131,8 @@ const JobOfferList = () => {
                 marginX: 5,
               }}
             >
-              <UserButtons textContent="Apply" />
-              <UserButtons textContent="Refer" />
+              <UserButtons textContent="Apply" component={Link} to={"/apply"} />
+              <UserButtons textContent="Refer" component={Link} to={"/apply"} />
             </Box>
             <Box>
               <ShareOffer linkJob={`opportunity-detail/${job.id}`} />

@@ -11,6 +11,7 @@ const WhatWillYouDo = () => {
         height: "auto",
         backgroundColor: "#FFFFFF",
         marginTop: { xs: 5, md: 7, lg: 10 },
+        marginBottom: { xs: 5, md: 7, lg: 10 },
       }}
       m={3}
       elevation={3}
@@ -79,7 +80,7 @@ const WhatWillYouDo = () => {
             <Typography
               sx={{
                 margin: 0,
-                color: "#3E3E3E",
+                color: "#000000",
                 fontsize: { xs: 16, lg: 18 },
                 justifyContent: "center",
                 alignItems: "center",
@@ -90,7 +91,7 @@ const WhatWillYouDo = () => {
             >
               Develop and maintain all server-side network components. Develop
               and maintain all server-side network components.
-            </Typography>{" "}
+            </Typography>
           </Grid>
         </Grid>
         <Grid container wrap="nowrap" spacing={2} margin={0}>
@@ -105,7 +106,7 @@ const WhatWillYouDo = () => {
             <Typography
               sx={{
                 margin: 0,
-                color: "#3E3E3E",
+                color: "#000000",
                 fontsize: { xs: 16, lg: 18 },
                 justifyContent: "center",
                 alignItems: "center",
@@ -116,7 +117,7 @@ const WhatWillYouDo = () => {
             >
               Develop and maintain all server-side network components. Develop
               and maintain all server-side network components.
-            </Typography>{" "}
+            </Typography>
           </Grid>
         </Grid>
         <Grid container wrap="nowrap" spacing={2} margin={0}>
@@ -131,7 +132,7 @@ const WhatWillYouDo = () => {
             <Typography
               sx={{
                 margin: 0,
-                color: "#3E3E3E",
+                color: "#000000",
                 fontsize: { xs: 16, lg: 18 },
                 justifyContent: "center",
                 alignItems: "center",
@@ -142,7 +143,7 @@ const WhatWillYouDo = () => {
             >
               Develop and maintain all server-side network components. Develop
               and maintain all server-side network components.
-            </Typography>{" "}
+            </Typography>
           </Grid>
         </Grid>
         <Grid container wrap="nowrap" spacing={2} margin={0}>
@@ -157,7 +158,7 @@ const WhatWillYouDo = () => {
             <Typography
               sx={{
                 margin: 0,
-                color: "#3E3E3E",
+                color: "#000000",
                 fontsize: { xs: 16, lg: 18 },
                 justifyContent: "center",
                 alignItems: "center",
@@ -168,7 +169,7 @@ const WhatWillYouDo = () => {
             >
               Develop and maintain all server-side network components.Develop
               and maintain all server-side network components.
-            </Typography>{" "}
+            </Typography>
           </Grid>
         </Grid>
       </CardContent>
